@@ -1,0 +1,39 @@
+
+
+<p>
+  <strong>Titular:</strong>
+  <%= @noticium.titular %>
+</p>
+
+<p>
+  <strong>Bajada:</strong>
+  <%= @noticium.bajada %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @noticium.fecha %>
+</p>
+
+<p>
+  <strong>Cuerpo:</strong>
+  <%= @noticium.cuerpo %>
+</p>
+
+
+<p>
+	<strong>Comentarios:</strong>
+</p>
+<table>
+<% @noticium.comentarios.each do |comentario| %>
+	<tr>
+		<td><%= comentario.contenido %></td>
+		<td><%= comentario.fecha %> </td>
+	</tr>
+ <% end %>
+ </table>
+
+
+
+
+<%= link_to 'Back', noticia_path %>

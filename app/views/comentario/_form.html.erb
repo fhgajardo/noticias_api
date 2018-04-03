@@ -1,0 +1,21 @@
+<%= form_for @comentario, :url => { :action => "comentar"} do |form| %>
+
+  <%= form.hidden_field :fecha, :value => Date.today %>
+  <%= form.hidden_field :noticium_id, :value => @noticium.id %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :comentario_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contenido %>
+    <%= form.text_area :contenido, id: :comentario_contenido %>
+  </div>
+
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

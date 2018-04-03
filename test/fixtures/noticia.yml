@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fecha: 2018-03-14
+  cuerpo: MyText
+  bajada: MyText
+  titular: MyString
+
+two:
+  fecha: 2018-03-14
+  cuerpo: MyText
+  bajada: MyText
+  titular: MyString

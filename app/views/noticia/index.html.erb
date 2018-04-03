@@ -1,0 +1,36 @@
+<p id="noticas"></p>
+
+<h1>Noticias</h1>
+
+
+
+  
+    <% @noticia.each do |noticium| %>
+    <table>
+      <thead>
+        <tr>
+          <th>Titular</th>
+          <th>Bajada</th>
+          <th>Fecha</th>
+          <th>Cuerpo</th>
+          <th>Comentarios</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+    <tbody>
+      <tr>
+        <td><%= noticium.titular %></td>
+        <td><%= noticium.bajada %></td>
+        <td><%= noticium.fecha %></td>
+        <td><%= noticium.cuerpo.truncate(503) %></td>
+        <td><%= noticium.comentarios.count %></td>
+        <td><%= link_to 'Leer completa', noticium %></td>
+      </tr>
+    </tbody>
+    </table>
+    <% end %>
+
+
+<br>
+
+
